@@ -1,4 +1,5 @@
-module github.com/dm0610/gb-go-backend1-project
+//module github.com/dm0610/gb-go-backend1-project
+module gb-go-backend1-project
 
 go 1.17
 
