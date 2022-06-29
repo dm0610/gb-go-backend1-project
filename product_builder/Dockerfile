@@ -13,14 +13,11 @@ RUN go mod tidy
 RUN go build -o goserver .
 USER goserver
 
-ENV PGHOST="products-postgresql.gb-backend1-dev.svc.cluster.local"
-ENV PGPORT="5432"
+ENV APP_DB_HOST="postgres"
+ENV APP_DB_PORT="5432"
 ENV APP_DB_USERNAME=techuser
 ENV APP_DB_PASSWORD=techuser
 ENV APP_DB_NAME=products
-ENV TEST_DB_USERNAME=$APP_DB_USERNAME
-ENV TEST_DB_PASSWORD=$APP_DB_PASSWORD
-ENV TEST_DB_NAME=$APP_DB_NAME
 
 EXPOSE 8010
 CMD ["./goserver"]
