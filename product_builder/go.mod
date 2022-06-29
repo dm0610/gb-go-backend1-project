@@ -1,4 +1,4 @@
-module github.com/dm0610/gb-go-backend1-project/product_builder
+module github.com/dm0610/gb-go-backend1-project
 
 go 1.17
 
