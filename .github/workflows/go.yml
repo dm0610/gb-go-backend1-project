@@ -3,7 +3,7 @@ name: Go
 on: [ push, pull_request ]
 
 jobs:
-  Build_App:
+  Workflow:
     runs-on: ubuntu-latest
     services:
       postgres:
@@ -33,9 +33,11 @@ jobs:
       run: $GITHUB_WORKSPACE/lint.sh
 #     run: go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.43.0 && export MY_PATH=$(echo $GITHUB_REF | awk -F/ '{print $NF}') && cd $MY_PATH  && golangci-lint run -c $GITHUB_WORKSPACE/.golangci.yml -v
     - name: Test
+      if: always()
       run : $GITHUB_WORKSPACE/test.sh
 #      run:  export MY_PATH=$(echo $GITHUB_REF | awk -F/ '{print $NF}') && cd $MY_PATH  && go test .
     - name: Build app
+      if: always()
       run : $GITHUB_WORKSPACE/build.sh    
 #      run: export MY_PATH=$(echo $GITHUB_REF | awk -F/ '{print $NF}') && cd $MY_PATH  && go build .
 
