@@ -25,3 +25,16 @@
 - id – the primary key
 - name – Имя продукта
 - price – Цена продукта
+
+### CI
+<p> Шаги в CI:
+- Lint
+- Test
+- Build app
+- Set up Docker Buildx
+- Login to DockerHub
+- Build image and push to Docker Hub
+
+### CD
+<> Шаги в CD в Heroku
+- пока не сделано, в процессе.
