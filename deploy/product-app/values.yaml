@@ -38,8 +38,22 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 8010
-
+  port: 8080
+env:
+  - name: PORT
+    value: '"8080"'
+  - name: APP_DB_HOST
+    value: "products-postgresql.gb-backend1-dev.svc.cluster.local"
+  - name: APP_DB_PORT
+    value: '"5432"'
+  - name: APP_DB_USERNAME
+    value: "techuser"
+  - name: APP_DB_PASSWORD
+    value: "techuser"
+  - name: APP_DB_NAME
+    value: "products"
+  - name: SSLSTATUS
+    value: "disable"
 ingress:
   enabled: true
   className: ""
@@ -47,7 +61,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: my.ingress.cluster.local
+    - host: product-api.dmvstrelnikov.ru
       paths:
         - path: /
           pathType: ImplementationSpecific

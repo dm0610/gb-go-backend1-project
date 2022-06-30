@@ -22,7 +22,7 @@ type App struct {
 
 func (a *App) Initialize(dbport, dbhost, user, password, dbname, sslstatus string) {
 	connectionString :=
-		fmt.Sprintf("port=%s host=%s user=%s password=%s dbname=%s %s", dbport, dbhost, user, password, dbname, sslstatus)
+		fmt.Sprintf("port=%s host=%s user=%s password=%s dbname=%s sslmode=%s", dbport, dbhost, user, password, dbname, sslstatus)
 
 	var err error
 	a.DB, err = sql.Open("postgres", connectionString)
