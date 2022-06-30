@@ -38,6 +38,9 @@
 ### CD
 <p> Шаги в CD в Heroku
 - пока не сделано, в процессе.
+  
+### Hands-On deploy in Heroku
+https://productapi-01.herokuapp.com/products
 
 ### Hands-On deploy in K8S
 <p> Шаги в CD в Yandex Cloud

@@ -20,9 +20,9 @@ type App struct {
 	DB     *sql.DB
 }
 
-func (a *App) Initialize(dbport, dbhost, user, password, dbname string) {
+func (a *App) Initialize(dbport, dbhost, user, password, dbname, sslstatus string) {
 	connectionString :=
-		fmt.Sprintf("port=%s host=%s user=%s password=%s dbname=%s sslmode=disable", dbport, dbhost, user, password, dbname)
+		fmt.Sprintf("port=%s host=%s user=%s password=%s dbname=%s %s", dbport, dbhost, user, password, dbname, sslstatus)
 
 	var err error
 	a.DB, err = sql.Open("postgres", connectionString)
@@ -36,7 +36,7 @@ func (a *App) Initialize(dbport, dbhost, user, password, dbname string) {
 }
 
 func (a *App) Run(addr string) {
-	log.Fatal(http.ListenAndServe(":8010", a.Router))
+	log.Fatal(http.ListenAndServe(addr, a.Router))
 }
 
 func (a *App) getProduct(w http.ResponseWriter, r *http.Request) {
