@@ -40,8 +40,9 @@
 - пока не сделано, в процессе.
   
 ### Hands-On deploy in Heroku
-https://productapi-01.herokuapp.com/products
+<p>https://productapi-01.herokuapp.com/products
 
+<p> Пример создания записи в базе: curl -X POST -H "Content-Type: application/json" --data '{"id":1,"name":"milk","price":1.14}'  https://productapi-01.herokuapp.com/product
 ### Hands-On deploy in K8S
 <p> Шаги в CD в Yandex Cloud
 - Сделал чарты для postgresql(скачал bitnami) и для приложений. В папке deploy
