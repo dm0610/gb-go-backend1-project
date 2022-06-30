@@ -27,7 +27,7 @@
 - price – Цена продукта
 
 ### CI
-<p> Шаги в CI:
+Шаги в CI:
 - Lint
 - Test
 - Build app
@@ -36,15 +36,17 @@
 - Build image and push to Docker Hub
 
 ### CD
-<p> Шаги в CD в Heroku
+Шаги в CD в Heroku:
 - пока не сделано, в процессе.
   
 ### Hands-On deploy in Heroku
-<p>https://productapi-01.herokuapp.com/products
+<p>https://productapi-01.herokuapp.com/products</p>
 
-<p> Пример создания записи в базе: curl -X POST -H "Content-Type: application/json" --data '{"id":1,"name":"milk","price":1.14}'  https://productapi-01.herokuapp.com/product
+Пример создания записи в базе: 
+curl -X POST -H "Content-Type: application/json" --data '{"id":1,"name":"milk","price":1.14}'  https://productapi-01.herokuapp.com/product
+
 ### Hands-On deploy in K8S
-<p> Шаги в CD в Yandex Cloud
+Шаги в CD в Yandex Cloud
 - Сделал чарты для postgresql(скачал bitnami) и для приложений. В папке deploy
 - Застрял на ингрессе. Кластер-то свой поднял и развернул оба приложения, но потом вспомнил, что нужно ещё публичный DNS заказать. Пока кластер погасил. Для отчёта приложу сюда копию лога из консоли
 
