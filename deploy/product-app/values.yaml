@@ -53,7 +53,7 @@ env:
   - name: APP_DB_NAME
     value: "products"
   - name: SSLSTATUS
-    value: "disable"
+    value: "disable" #require/disable
 ingress:
   enabled: true
   className: ""

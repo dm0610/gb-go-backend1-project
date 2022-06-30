@@ -18,7 +18,7 @@ ENV APP_DB_PORT='5432'
 ENV APP_DB_USERNAME='techuser'
 ENV APP_DB_PASSWORD='techuser'
 ENV APP_DB_NAME='products'
-ENV SSLSTATUS='sslmode=false'
+ENV SSLSTATUS='disable'
 
 EXPOSE 8080
 CMD ["./goserver"]
